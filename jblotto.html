@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let lotoAry = [5, 8, 13, 44, 32, 18];
+        let myAry= [];
+
+        //맞추려는 숫자 입력
+        for(let i=0;i<lotoAry.length;i++){
+            myAry = Number(prompt("로또 수 입력" + (i+1) + "번째 수"));
+
+            //0-45 사이 숫자만 입력
+            if(myAry < 0 || myAry > 45){
+                prompt("0 과 45 사이의 수 만 입 력 하 세요");
+                break;
+            }
+
+            //중복되는 수 입력방지
+            if(true){
+
+            }
+        }
+        
+        //내가 입력한 수 들과 로또 번호 비교대조
+        for(let obj of myAry){
+            if( lotoAry ==obj){
+
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>

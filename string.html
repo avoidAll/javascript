@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//문자열을 이용한 반복문 활용
+
+let str = "hello world";
+
+//문자열 자르기
+//str.substring(시작하는 위치, 끝나는 위치)
+console.log(str.substring(2,7));
+
+//문자위치 찾기, 문자열을 구하는명령어?
+// str.indexOf()
+console.log(str.indexOf('d'));
+
+//문자열 길이
+// str.length()
+console.log(str.length)
+
+
+//소문자를 대문자로 변경
+// str.toUpperCase()
+console.log(str.toUpperCase());
+
+let str2 = "HELLO WORLD";
+
+//대문자에서 소문자로 변경
+// str.LowerCase()
+console.log(str2.toLowerCase())
+
+//맨끝자리 확인
+// str.endsWith()
+console.log(str.endsWith('d'))
+
+
+//구분자를 기준으로 문자를 자르세요!
+str3 = "hello, bye, yedam";
+str3.split(',');
+
+
+//str 길이만큼 반복문 실행
+for(let i=0; i<str.length; i++){
+    
+    //문자열 자름, i=0, 시작위치는 0, 끝나는 위치는 l
+    if(str.substring(i,i+1) == "l"){
+        console.log(" l 위치는 " + (i+1) + "입니다");
+    }
+}
+
+
+//문자열을 활용한 반복문
+
+//입력 받은 수까지 출력을 합니다
+//단, 마지막 자리가 3,6,9로 끝나면 *로 표시합니다.
+//예를 들어 1-20 출력할건데 -> 1,2,*,4,5,*,7,8,*,10, ..., 1*, 14, ... 1*, 20
+
+let num = Number(prompt("숫자를 하나 입력하세요"));
+
+
+for(let i =1; i<=num; i++){
+
+    //보기 복잡하니까 단순화
+    let temp = String(i);
+    
+
+    //endsWith활용
+    if(temp.endsWith('3') || temp.endsWith('6') ||temp.endsWith('9') ){
+        //총 길이- -1
+        temp = temp.substring(0, temp.length-1);
+        temp += "*";
+    }
+    console.log(temp);
+}
+
+
+//배열
+
+
+
+    </script>
+</body>
+</html>
